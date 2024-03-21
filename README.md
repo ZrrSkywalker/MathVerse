@@ -31,20 +31,20 @@ Official repository for the paper "[MathVerse: Does Your Multi-modal LLM Truly S
 The capabilities of Multi-modal Large Language Models (MLLMs) in visual math problem-solving remain insufficiently evaluated and understood. We investigate current benchmarks to incorporate excessive visual content within textual questions, which potentially assist MLLMs in deducing answers without truly interpreting the input diagrams.
 
 <p align="center">
-    <img src="figs/fig1.png" width="70%"> <br>
+    <img src="figs/fig1.png" width="90%"> <br>
 </p>
 
 To this end, we introduce **MathVerse**, an all-around visual math benchmark designed for an equitable and in-depth evaluation of MLLMs. We meticulously collect 2,612 high-quality, multi-subject math problems with diagrams from publicly available sources. Each problem is then transformed by human annotators into **six distinct versions**, each offering varying degrees of information content in multi-modality, contributing to **15K** test samples in total. This approach allows MathVerse to comprehensively assess ***whether and how much MLLMs can truly understand the visual diagrams for mathematical reasoning.*** 
 
 <p align="center">
-    <img src="figs/fig2.png" width="70%"> <br>
+    <img src="figs/fig2.png" width="90%"> <br>
     Six different versions of each problem in <b>MathVerse</b> transformed by expert annotators.
 </p>
 
 In addition, we propose a **Chain-of-Thought (CoT) Evaluation strategy** for a fine-grained assessment of the output answers. Rather than naively judging True or False, we employ GPT-4(V) to adaptively extract crucial reasoning steps, and then score each step with detailed error analysis, which can reveal the intermediate CoT reasoning quality by MLLMs.
 
 <p align="center">
-    <img src="figs/fig3.png" width="70%"> <br>
+    <img src="figs/fig3.png" width="90%"> <br>
     The two phases of the CoT evaluation strategy.
 </p>
 
