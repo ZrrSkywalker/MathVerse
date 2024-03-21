@@ -1,1 +1,2 @@
-# 🔥 MathVerse: Evaluating Multi-modal LLMs for Math Diagrams
+# MathVerse: Does Your Multi-modal LLM Truly See the Diagrams in Visual Math Problems?
+
