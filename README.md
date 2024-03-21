@@ -11,19 +11,19 @@
 
 Official repository for the paper "[MathVerse: Does Your Multi-modal LLM Truly See the Diagrams in Visual Math Problems?]()".
 
-🌟 For more details, please refer to the project page with dataset exploration and visualization tools: [https://mathverse.github.io/](https://mathverse.github.io/).
+🌟 For more details, please refer to the project page with dataset exploration and visualization tools: [https://mathverse-cuhk.github.io/](https://mathverse-cuhk.github.io/).
 
 
-[[🌐 Webpage](https://mathverse.github.io/)] [[📖 Paper]()] [[🤗 Huggingface Dataset]()] [[🏆 Leaderboard](https://mathverse.github.io/#leaderboard)] [[🔍 Visualization](https://mathvista.github.io/#visualization)]
+[[🌐 Webpage](https://mathverse-cuhk.github.io/)] [[📖 Paper]()] [[🤗 Huggingface Dataset](https://huggingface.co/datasets/AI4Math/MathVerse)] [[🏆 Leaderboard](https://mathverse-cuhk.github.io/#leaderboard)] [[🔍 Visualization](https://mathverse-cuhk.github.io/#visualization)]
 
 
 ## 💥 News
 
-- **[2024.03.22]** 🚀 We release the [arXiv paper]() and some data samples in the [visualizer]().
+- **[2024.03.22]** 🚀 We release the [arXiv paper]() and some data samples in the [visualizer](https://mathverse-cuhk.github.io/#visualization).
 
 ## 📌 ToDo
 
-- The *testmini* set of MathVerse will be released at [🤗 Huggingface] in a week.
+- The *testmini* set of MathVerse will be released at [🤗 Huggingface](https://huggingface.co/datasets/AI4Math/MathVerse) in a week.
 - Coming soon: *CoT Evaluation results*, evaluation tools, and the entire MathVerse dataset
 
 ## 👀 About MathVerse
@@ -52,7 +52,7 @@ In addition, we propose a **Chain-of-Thought (CoT) Evaluation strategy** for a f
 
 ### Contributing to the Leaderboard
 
-🚨 The [Leaderboard](https://mathverse.github.io/#leaderboard) is continuously being updated. 
+🚨 The [Leaderboard](https://mathverse-cuhk.github.io/#leaderboard) is continuously being updated. 
 
 The evaluation instructions and tools will be released soon. For now, please send your results on the ***testmini*** set to this email: 1700012927@pku.edu.cn. Please refer to the following template to prepare your result json file.
 
