@@ -66,7 +66,7 @@ Click to expand the examples for six problems versions within three subjects</su
 <summary>🔍 Plane Geometry</summary>
 
 <p align="center">
-    <img src="figs/ver1.png" width="90%"> <br>
+    <img src="figs/ver1.png" width="50%"> <br>
 </p>
 </details>
 
@@ -74,7 +74,7 @@ Click to expand the examples for six problems versions within three subjects</su
 <summary>🔍 Solid Geometry</summary>
 
 <p align="center">
-    <img src="figs/ver2.png" width="90%"> <br>
+    <img src="figs/ver2.png" width="50%"> <br>
 </p>
 </details>
 
@@ -82,7 +82,7 @@ Click to expand the examples for six problems versions within three subjects</su
 <summary>🔍 Functions</summary>
 
 <p align="center">
-    <img src="figs/ver3.png" width="90%"> <br>
+    <img src="figs/ver3.png" width="50%"> <br>
 </p>
 </details>
 
