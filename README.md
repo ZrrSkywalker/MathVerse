@@ -60,7 +60,7 @@ The evaluation instructions and tools will be released soon. For now, please sen
 
 ## 📐 Dataset Examples
 
-Click to expand the examples for six problems versions within three subjects</summary>
+🖱 Click to expand the examples for six problems versions within three subjects</summary>
 
 <details>
 <summary>🔍 Plane Geometry</summary>
