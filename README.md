@@ -11,10 +11,10 @@
 
 Official repository for the paper "[MathVerse: Does Your Multi-modal LLM Truly See the Diagrams in Visual Math Problems?]()".
 
-For more details, please refer to the project page with dataset exploration and visualization tools: [https://mathverse.github.io/](https://mathverse.github.io/).
+🌟 For more details, please refer to the project page with dataset exploration and visualization tools: [https://mathverse.github.io/](https://mathverse.github.io/).
 
 
-[[Webpage](https://mathverse.github.io/)] [[Paper]()] [[Huggingface Dataset]()] [[Leaderboard](https://mathverse.github.io/#leaderboard)] [[Visualization](https://mathvista.github.io/#visualization)]
+[[🌐 Webpage](https://mathverse.github.io/)] [[📖 Paper]()] [[🤗 Huggingface Dataset]()] [[🏆 Leaderboard](https://mathverse.github.io/#leaderboard)] [[🔍 Visualization](https://mathvista.github.io/#visualization)]
 
 
 ## 💥 News
