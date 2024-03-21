@@ -54,13 +54,14 @@ In addition, we propose a **Chain-of-Thought (CoT) Evaluation strategy** for a f
 
 🚨 The [Leaderboard](https://mathverse-cuhk.github.io/#leaderboard) is continuously being updated. 
 
-The evaluation instructions and tools will be released soon. For now, please send your results on the ***testmini*** set to this email: 1700012927@pku.edu.cn. Please refer to the following template to prepare your result json file.
+The evaluation instructions and tools will be released soon. For now, please send your results on the ***testmini*** set to this email: 1700012927@pku.edu.cn. Please refer to the following two templates to prepare your result json file, one for the five problem versions and the other for the Text-only version.
 
-- [output_testmini_template.json]()
+- [output_modelname.json](https://github.com/ZrrSkywalker/MathVerse/blob/main/output_templates/output_modelname.json)
+- [output_modelname_text-only.json](https://github.com/ZrrSkywalker/MathVerse/blob/main/output_templates/output_modelname_text-only.json)
 
 ## 📐 Dataset Examples
 
-🖱 Click to expand the examples for six problems versions within three subjects</summary>
+🖱 Click to expand the examples for six problem versions within three subjects</summary>
 
 <details>
 <summary>🔍 Plane Geometry</summary>
@@ -86,7 +87,11 @@ The evaluation instructions and tools will be released soon. For now, please sen
 </p>
 </details>
 
-## 🛠 Dataset Usage
+## 📝 Dataset Usage
+
+Coming soon!
+
+## 📈 Evaluation Results
 
 Coming soon!
 
