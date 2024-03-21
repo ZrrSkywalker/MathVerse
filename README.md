@@ -52,7 +52,7 @@ In addition, we propose a **Chain-of-Thought (CoT) Evaluation strategy** for a f
 
 ### Contributing to the Leaderboard
 
-🚨 The leaderboard is continuously being updated. 
+🚨 The [Leaderboard](https://mathverse.github.io/#leaderboard) is continuously being updated. 
 
 The evaluation instructions and tools will be released soon. For now, please send your results on the ***testmini*** set to this email: 1700012927@pku.edu.cn. Please refer to the following template to prepare your result json file.
 
