@@ -28,7 +28,7 @@ Official repository for the paper "[MathVerse: Does Your Multi-modal LLM Truly S
 
 ## 👀 About MathVerse
 
-The capabilities of Multi-modal Large Language Models (MLLMs) in visual math problem-solving remain insufficiently evaluated and understood. We investigate current benchmarks to incorporate excessive visual content within textual questions, which potentially assist MLLMs in deducing answers without truly interpreting the input diagrams.
+The capabilities of **Multi-modal Large Language Models (MLLMs)** in **visual math problem-solving** remain insufficiently evaluated and understood. We investigate current benchmarks to incorporate excessive visual content within textual questions, which potentially assist MLLMs in deducing answers without truly interpreting the input diagrams.
 
 <p align="center">
     <img src="figs/fig1.png" width="90%"> <br>
@@ -50,6 +50,6 @@ In addition, we propose a **Chain-of-Thought (CoT) Evaluation strategy** for a f
 
 ## 🏆 Leaderboard
 
-### Contributing the Leaderboard
+### Contributing to the Leaderboard
 
 🚨🚨 The leaderboard is continuously being updated. 
