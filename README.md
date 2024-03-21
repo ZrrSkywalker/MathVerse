@@ -54,9 +54,9 @@ In addition, we propose a **Chain-of-Thought (CoT) Evaluation strategy** for a f
 
 🚨 The leaderboard is continuously being updated. 
 
-The evaluation instructions and tools will be released soon. For now, please send your results on the ***testmini*** set to [this email](1700012927@pku.edu.cn). Please refer to the following template to prepare your result json file.
+The evaluation instructions and tools will be released soon. For now, please send your results on the ***testmini*** set to this email: 1700012927@pku.edu.cn. Please refer to the following template to prepare your result json file.
 
-- [output_testmini_template_for_leaderboard_submission.json]()
+- [output_testmini_template.json]()
 
 ## 🛠 Dataset Usage
 
