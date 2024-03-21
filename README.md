@@ -1,2 +1,1 @@
-# MathVerse
-A Comprehensive Visual Math Benchmark for Multi-modal LLMs
+# 🔥 MathVerse: Do Multi-modal LLMs Truly See the Diagrams?
