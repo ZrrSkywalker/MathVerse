@@ -52,4 +52,39 @@ In addition, we propose a **Chain-of-Thought (CoT) Evaluation strategy** for a f
 
 ### Contributing to the Leaderboard
 
-🚨🚨 The leaderboard is continuously being updated. 
+🚨 The leaderboard is continuously being updated. 
+
+The evaluation instructions and tools will be released soon. For now, please send your results on the ***testmini*** set to [this email](1700012927@pku.edu.cn). Please refer to the following template to prepare your result json file.
+
+- [output_testmini_template_for_leaderboard_submission.json]()
+
+## 🛠 Dataset Usage
+
+Coming soon!
+
+## :white_check_mark: Cite
+
+If you find **MathVerse** useful for your research and applications, please kindly cite using this BibTeX:
+
+```latex
+@inproceedings{zhang2024mathverse,
+  title={MathVerse: Does Your Multi-modal LLM Truly See the Diagrams in Visual Math Problems?},
+  author={Renrui Zhang, Dongzhi Jiang, Yichi Zhang, Haokun Lin, Ziyu Guo, Pengshuo Qiu, Aojun Zhou, Pan Lu, Kai-Wei Chang, Peng Gao, Hongsheng Li},
+  booktitle={arXiv},
+  year={2024}
+}
+```
+
+## 🧠 Related Work
+
+Explore our additional research on **Vision-Language Large Models**, focusing on multi-modal LLMs and mathematical reasoning:
+
+- **[MathVista]** [MathVista: Evaluating Mathematical Reasoning of Foundation Models in Visual Contexts](https://github.com/lupantech/MathVista)
+- **[LLaMA-Adapter]** [LLaMA-Adapter: Efficient Fine-tuning of Language Models with Zero-init Attention](https://github.com/OpenGVLab/LLaMA-Adapter)
+- **[LLaMA-Adapter V2]** [LLaMA-Adapter V2: Parameter-Efficient Visual Instruction Model](https://github.com/OpenGVLab/LLaMA-Adapter)
+- **[ImageBind-LLM]** [Imagebind-LLM: Multi-modality Instruction Tuning](https://github.com/OpenGVLab/LLaMA-Adapter/tree/main/imagebind_LLM)
+- **[SPHINX]** [SPHINX: The Joint Mixing of Weights, Tasks, and Visual Embeddings for Multi-modal Large Language Models](https://github.com/Alpha-VLLM/LLaMA2-Accessory/tree/main/SPHINX)
+- **[SPHINX-X]** [SPHINX-X: Scaling Data and Parameters for a Family of Multi-modal Large Language Models](https://github.com/Alpha-VLLM/LLaMA2-Accessory/tree/main/SPHINX)
+- **[Point-Bind & Point-LLM]** [Point-Bind & Point-LLM: Aligning Point Cloud with Multi-modality for 3D Understanding, Generation, and Instruction Following](https://github.com/ZiyuGuo99/Point-Bind_Point-LLM)
+- **[PerSAM]** [Personalize segment anything model with one shot](https://github.com/ZrrSkywalker/Personalize-SAM)
+- - **[MathCoder]** [MathCoder: Seamless Code Integration in LLMs for Enhanced Mathematical Reasoning](https://github.com/mathllm/MathCoder)
