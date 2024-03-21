@@ -58,11 +58,39 @@ The evaluation instructions and tools will be released soon. For now, please sen
 
 - [output_testmini_template.json]()
 
+## 📐 Dataset Examples
+
+Click to expand the examples for six problems versions within three subjects</summary>
+
+<details>
+<summary>🔍 Plane Geometry</summary>
+
+<p align="center">
+    <img src="figs/ver1.png" width="90%"> <br>
+</p>
+</details>
+
+<details>
+<summary>🔍 Solid Geometry</summary>
+
+<p align="center">
+    <img src="figs/ver2.png" width="90%"> <br>
+</p>
+</details>
+
+<details>
+<summary>🔍 Functions</summary>
+
+<p align="center">
+    <img src="figs/ver3.png" width="90%"> <br>
+</p>
+</details>
+
 ## 🛠 Dataset Usage
 
 Coming soon!
 
-## :white_check_mark: Cite
+## :white_check_mark: Citation
 
 If you find **MathVerse** useful for your research and applications, please kindly cite using this BibTeX:
 
