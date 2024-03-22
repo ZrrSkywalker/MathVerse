@@ -9,17 +9,17 @@
 ![GPT-4V](https://img.shields.io/badge/Model-GPT--4V-green)
 ![Gemini](https://img.shields.io/badge/Model-Gemini-green)
 
-Official repository for the paper "[MathVerse: Does Your Multi-modal LLM Truly See the Diagrams in Visual Math Problems?]()".
+Official repository for the paper "[MathVerse: Does Your Multi-modal LLM Truly See the Diagrams in Visual Math Problems?](https://arxiv.org/pdf/2403.14624.pdf)".
 
 🌟 For more details, please refer to the project page with dataset exploration and visualization tools: [https://mathverse-cuhk.github.io/](https://mathverse-cuhk.github.io/).
 
 
-[[🌐 Webpage](https://mathverse-cuhk.github.io/)] [[📖 Paper]()] [[🤗 Huggingface Dataset](https://huggingface.co/datasets/AI4Math/MathVerse)] [[🏆 Leaderboard](https://mathverse-cuhk.github.io/#leaderboard)] [[🔍 Visualization](https://mathverse-cuhk.github.io/#visualization)]
+[[🌐 Webpage](https://mathverse-cuhk.github.io/)] [[📖 Paper](https://arxiv.org/pdf/2403.14624.pdf)] [[🤗 Huggingface Dataset](https://huggingface.co/datasets/AI4Math/MathVerse)] [[🏆 Leaderboard](https://mathverse-cuhk.github.io/#leaderboard)] [[🔍 Visualization](https://mathverse-cuhk.github.io/#visualization)]
 
 
 ## 💥 News
 
-- **[2024.03.22]** 🚀 We release the [arXiv paper]() and some data samples in the [visualizer](https://mathverse-cuhk.github.io/#visualization).
+- **[2024.03.22]** 🚀 We release the [arXiv paper](https://arxiv.org/pdf/2403.14624.pdf) and some data samples in the [visualizer](https://mathverse-cuhk.github.io/#visualization).
 
 ## 📌 ToDo
 
