@@ -19,7 +19,8 @@ Official repository for the paper "[MathVerse: Does Your Multi-modal LLM Truly S
 
 ## 💥 News
 
-- **[2024.03.22]** 🚀 We release the [arXiv paper](https://arxiv.org/pdf/2403.14624.pdf) and some data samples in the [visualizer](https://mathverse-cuhk.github.io/#visualization).
+- **[2024.03.22]** 🎉 **MathVerse** has been selected as 🤗 ***Hugging Face Daily Papers***!
+- **[2024.03.22]** 🚀 We release the [arXiv paper](https://arxiv.org/pdf/2403.14624) and some data samples in the [visualizer](https://mathverse-cuhk.github.io/#visualization).
 
 ## 📌 ToDo
 
@@ -121,4 +122,5 @@ Explore our additional research on **Vision-Language Large Models**, focusing on
 - **[Point-Bind & Point-LLM]** [Multi-modality 3D Understanding, Generation, and Instruction Following](https://github.com/ZiyuGuo99/Point-Bind_Point-LLM)
 - **[PerSAM]** [Personalize segment anything model with one shot](https://github.com/ZrrSkywalker/Personalize-SAM)
 - **[MathCoder]** [MathCoder: Seamless Code Integration in LLMs for Enhanced Mathematical Reasoning](https://github.com/mathllm/MathCoder)
+- **[MathVision]** [Measuring Multimodal Mathematical Reasoning with the MATH-Vision Dataset](https://github.com/mathvision-cuhk/MathVision)
 - **[CSV]** [Solving Challenging Math Word Problems Using GPT-4 Code Interpreter](https://wangk.org/publications/1_iclr2024_csv/)
