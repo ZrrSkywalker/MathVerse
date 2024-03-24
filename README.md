@@ -101,10 +101,10 @@ Coming soon!
 If you find **MathVerse** useful for your research and applications, please kindly cite using this BibTeX:
 
 ```latex
-@inproceedings{zhang2024mathverse,
+@article{zhang2024mathverse,
   title={MathVerse: Does Your Multi-modal LLM Truly See the Diagrams in Visual Math Problems?},
-  author={Renrui Zhang, Dongzhi Jiang, Yichi Zhang, Haokun Lin, Ziyu Guo, Pengshuo Qiu, Aojun Zhou, Pan Lu, Kai-Wei Chang, Peng Gao, Hongsheng Li},
-  booktitle={arXiv},
+  author={Zhang, Renrui and Jiang, Dongzhi and Zhang, Yichi and Lin, Haokun and Guo, Ziyu and Qiu, Pengshuo and Zhou, Aojun and Lu, Pan and Chang, Kai-Wei and Gao, Peng and others},
+  journal={arXiv preprint arXiv:2403.14624},
   year={2024}
 }
 ```
