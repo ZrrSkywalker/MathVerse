@@ -1,0 +1,20 @@
+[
+    {
+        "sample_index": "685",
+        "problem_index": "685",
+        "problem_version": "Text Only",
+        "question": "A soft drink can has a height of 13 cm and a radius of 3 cm. Find L, the length of the longest straw that can fit into the can (so that the straw is not bent and fits entirely inside the can).\n\nGive your answer rounded down to the nearest cm, to ensure it fits inside the can.",
+        "image": "",
+        "answer": "14",
+        "question_type": "free-form",
+        "metadata": {
+            "split": "testmini",
+            "source": "Geo3D_collected",
+            "subject": "Solid Geometry",
+            "subfield": "Length"
+        },
+        "query_wo": "Please directly answer the question and provide the final value, e.g., 1, 2.5, 300.\nQuestion: A soft drink can has a height of 13 cm and a radius of 3 cm. Find L, the length of the longest straw that can fit into the can (so that the straw is not bent and fits entirely inside the can).\n\nGive your answer rounded down to the nearest cm, to ensure it fits inside the can.",
+        "query_cot": "Please first conduct reasoning, and then answer the question and provide the final value, e.g., 1, 2.5, 300, at the end.\nQuestion: A soft drink can has a height of 13 cm and a radius of 3 cm. Find L, the length of the longest straw that can fit into the can (so that the straw is not bent and fits entirely inside the can).\n\nGive your answer rounded down to the nearest cm, to ensure it fits inside the can.",
+        "model_answer": "First, we must realize that the longest straw that can fit inside the can will fit along the can's diagonal when viewed from the side. This diagonal would span from the bottom center of the circular base of the can, through the center of the circle, and to the top edge of the can.\n\nTo find the length of this diagonal, L, we can use the Pythagorean theorem. This theorem states that in a right-angle triangle, the square of the length of the hypotenuse (the side opposite the right angle) is equal to the sum of the squares of the lengths of the other two sides.\n\nHere, the height of the can (13 cm) and the diameter of the base (twice the radius, so 2 x 3 cm = 6 cm) are the two sides of a right-angled triangle, and the diagonal (L) is the hypotenuse.\n\nUsing the Pythagorean theorem:\nL\u00b2 = height\u00b2 + radius\u00b2\nL\u00b2 = 13\u00b2 + 6\u00b2\nL\u00b2 = 169 + 36\nL\u00b2 = 205\nL = \u221a205\nL \u2248 14.32\n\nTherefore, the length of the longest straw that can fit into the can, when rounded down to the nearest cm to ensure it fits inside the can, would be 14 cm."
+    }
+]
