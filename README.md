@@ -76,19 +76,29 @@ Here are some examples of how to access the downloaded dataset:
 ```python
 # print the first example on the testmini set
 print(dataset["testmini"][0])
-print(dataset["testmini"][0]['sample_index']) # print the test sample id
-print(dataset["testmini"][0]['problem_index']) # print the unique problem id
-print(dataset["testmini"][0]['problem_version']) # print the problem version
-print(dataset["testmini"][0]['question']) # print the question text
-print(dataset["testmini"][0]['query']) # print the question query
-print(dataset["testmini"][0]['answer']) # print the answer
-print(dataset["testmini"][0]['query_wo']) # the input query for w/o scores
-print(dataset["testmini"][0]['query_cot']) # the input query for CoT evaluation scores
-dataset["testmini"][0]['image'] # display the image
+print(dataset["testmini"][0]['sample_index'])  # print the test sample id
+print(dataset["testmini"][0]['problem_index'])  # print the unique problem id
+print(dataset["testmini"][0]['problem_version'])  # print the problem version
+print(dataset["testmini"][0]['question'])  # print the question text
+print(dataset["testmini"][0]['query'])  # print the question query
+print(dataset["testmini"][0]['answer'])  # print the answer
+print(dataset["testmini"][0]['query_wo'])  # the input query for w/o scores
+print(dataset["testmini"][0]['query_cot'])  # the input query for CoT evaluation scores
+dataset["testmini"][0]['image']  # display the image
 
 # print the first text-only example within the testmini set
 print(dataset_text_only["testmini_text_only"][0])
 ```
+
+We also provide the images in the PNG format. You can download and unzip them using the following commands:
+
+```bash
+cd data
+wget https://huggingface.co/datasets/AI4Math/MathVerse/resolve/main/images.zip
+unzip images.zip && rm images.zip
+```
+
+This step might be optional if you prefer to use the Hugging Face format of the data.
 
 ### Inference
 
