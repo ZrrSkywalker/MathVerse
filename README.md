@@ -19,12 +19,12 @@ Official repository for the paper "[MathVerse: Does Your Multi-modal LLM Truly S
 
 ## 💥 News
 
+- **[2024.03.31]** 🔥 We release the ***testmini*** set of MathVerse at [[🤗 Huggingface Dataset]](https://huggingface.co/datasets/AI4Math/MathVerse), alongside the [evaluation code](https://github.com/ZrrSkywalker/MathVerse/edit/main/README.md#evaluation)!
 - **[2024.03.22]** 🎉 **MathVerse** has been selected as 🤗 [***Hugging Face Daily Papers***](https://huggingface.co/papers/2403.14624)!
 - **[2024.03.22]** 🚀 We release the [arXiv paper](https://arxiv.org/pdf/2403.14624) and some data samples in the [visualizer](https://mathverse-cuhk.github.io/#visualization).
 
 ## 📌 ToDo
 
-- The *testmini* set of MathVerse will be released at [🤗 Huggingface](https://huggingface.co/datasets/AI4Math/MathVerse) in a week.
 - Coming soon: *CoT Evaluation results*, evaluation tools, and the entire MathVerse dataset
 
 ## 👀 About MathVerse
@@ -51,14 +51,83 @@ In addition, we propose a **Chain-of-Thought (CoT) Evaluation strategy** for a f
 
 ## 🏆 Leaderboard
 
-### Contributing to the Leaderboard
+### Contributing to the *testmini* Leaderboard
 
-🚨 The [Leaderboard](https://mathverse-cuhk.github.io/#leaderboard) is continuously being updated. 
+🚨 The [Leaderboard](https://mathverse-cuhk.github.io/#leaderboard) for the *testmini* set is continuously being updated. We welcome the contribution of your excellent MLLMs!
 
-The evaluation instructions and tools will be released soon. For now, please send your results on the ***testmini*** set to this email: 1700012927@pku.edu.cn. Please refer to the following two templates to prepare your result json file, one for the five problem versions and the other for the Text-only version.
+### Data Usage
 
-- [output_modelname.json](https://github.com/ZrrSkywalker/MathVerse/blob/main/output_templates/output_modelname.json)
-- [output_modelname_text-only.json](https://github.com/ZrrSkywalker/MathVerse/blob/main/output_templates/output_modelname_text-only.json)
+We release the ***testmini*** set of MathVerse for benchmarking on the leaderboard, which contains *788 visual math problems* within two json files:
+
+- [testmini.json](): **788*5** test samples for five main versions to ***calculate the overall score***, i.e., Text Dominant/Lite and Vision Intensive/Dominant/Only.
+- [testmini_text-only.json](): **788*1** test samples for Text Only to ***ablate the visual diagram understanding capacity***.
+
+You can download the dataset from the [🤗 Huggingface](https://huggingface.co/datasets/AI4Math/MathVerse) by the following command (make sure that you have installed [related packages](https://huggingface.co/docs/datasets/quickstart)):
+
+```python
+from datasets import load_dataset
+
+dataset = load_dataset("AI4Math/MathVerse")
+```
+
+Here are some examples of how to access the downloaded dataset:
+
+```python
+# print the first example on the testmini set
+print(dataset["testmini"][0])
+print(dataset["testmini"][0]['sample_index']) # print the test sample id
+print(dataset["testmini"][0]['problem_index']) # print the unique problem id
+print(dataset["testmini"][0]['problem_version']) # print the problem version
+print(dataset["testmini"][0]['question']) # print the question text
+print(dataset["testmini"][0]['query']) # print the question query
+print(dataset["testmini"][0]['image']) # print the image path
+print(dataset["testmini"][0]['answer']) # print the answer
+dataset["testmini"][0]['decoded_image'] # display the image
+
+# print the first text-only example within the testmini set
+print(dataset["testmini_text-only"][0])
+```
+
+### Inference
+
+First, please refer to the following two templates to prepare your result json files.
+
+- [output_testmini.json](https://github.com/ZrrSkywalker/MathVerse/blob/main/output_templates/output_modelname.json): the results of five problem versions in [testmini.json]()
+- [output_testmini_text-only.json](https://github.com/ZrrSkywalker/MathVerse/blob/main/output_templates/output_modelname_text-only.json): the results of the Text-only version in [testmini_text-only.json]()
+
+### Evaluation
+
+Then, we provide the code to derive the 'w/o' scores on the leaderboard, which requires advanced LLMs (e.g., ChatGPT, GPT-4, or Qwen-Max) to extract and match answers. The code 'CoT-E' scores will be released soon.
+
+There are two steps for the evaluation of 'w/o' scores, where we prompt the ChatGPT/GPT-4 API as an example:
+
+#### Step 1: Answer Extraction
+
+```bash
+python extract_answer_s1.py \
+--model_output_file PATH_TO_OUTPUT_FILE \
+--save_file PATH_TO_ENTRACTION_FILE \
+--cache \
+--trunk_response 30 \
+--save_every 10 \
+--api_key GPT_API
+```
+
+Note that, step 1 is ***optional*** if your MLLM can directly output a clean answer for scoring.
+
+#### Step2: Answer Scoring
+
+```bash
+python score_answer_s2.py \
+--extraction_file PATH_TO_ENTRACTION_FILE \
+--save_file PATH_TO_SCORE_FILE \
+--cache \
+--trunk_response 30 \
+--save_every 10 \
+--api_key GPT_API
+```
+
+Note that, we recommend using ChatGPT/GPT-4 API for the step 2 by default. By adding `--quick_match` in the command above, we also support a direct string matching between extracted answers and ground truths, which is faster but not accurate enough.
 
 ## 📐 Dataset Examples
 
@@ -88,9 +157,6 @@ The evaluation instructions and tools will be released soon. For now, please sen
 </p>
 </details>
 
-## 📝 Dataset Usage
-
-Coming soon!
 
 ## 📈 Evaluation Results
 
