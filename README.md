@@ -60,7 +60,7 @@ In addition, we propose a **Chain-of-Thought (CoT) Evaluation strategy** for a f
 We release the ***testmini*** set of MathVerse for benchmarking on the leaderboard, which contains *788 visual math problems* within two json files:
 
 - [testmini.json](https://github.com/ZrrSkywalker/MathVerse/blob/main/data/testmini.json): **788*5** test samples for five main versions to ***calculate the overall score***, i.e., Text Dominant/Lite and Vision Intensive/Dominant/Only.
-- [testmini_text-only.json](https://github.com/ZrrSkywalker/MathVerse/blob/main/data/testmini_text-only.json): **788*1** test samples for Text Only to ***ablate the visual diagram understanding capacity***.
+- [testmini_text_only.json](https://github.com/ZrrSkywalker/MathVerse/blob/main/data/testmini_text_only.json): **788*1** test samples for Text Only to ***ablate the visual diagram understanding capacity***.
 
 You can download the dataset from the [🤗 Huggingface](https://huggingface.co/datasets/AI4Math/MathVerse) by the following command (make sure that you have installed [related packages](https://huggingface.co/docs/datasets/quickstart)):
 
@@ -68,7 +68,7 @@ You can download the dataset from the [🤗 Huggingface](https://huggingface.co/
 from datasets import load_dataset
 
 dataset = load_dataset("AI4Math/MathVerse", "testmini")
-dataset_text-only = load_dataset("AI4Math/MathVerse", "testmini_text-only")
+dataset_text_only = load_dataset("AI4Math/MathVerse", "testmini_text_only")
 ```
 
 Here are some examples of how to access the downloaded dataset:
@@ -87,7 +87,7 @@ print(dataset["testmini"][0]['query_cot']) # the input query for CoT evaluation 
 dataset["testmini"][0]['image'] # display the image
 
 # print the first text-only example within the testmini set
-print(dataset_text-only["testmini_text-only"][0])
+print(dataset_text_only["testmini_text_only"][0])
 ```
 
 ### Inference
@@ -95,7 +95,7 @@ print(dataset_text-only["testmini_text-only"][0])
 First, please refer to the following two templates to prepare your result json files. 
 
 - [output_testmini.json](https://github.com/ZrrSkywalker/MathVerse/blob/main/output_templates/output_testmini.json): the results of five problem versions in [testmini.json](https://github.com/ZrrSkywalker/MathVerse/blob/main/data/testmini.json)
-- [output_testmini_text-only.json](https://github.com/ZrrSkywalker/MathVerse/blob/main/output_templates/output_testmini_text-only.json): the results of the Text-only version in [testmini_text-only.json](https://github.com/ZrrSkywalker/MathVerse/blob/main/data/testmini_text-only.json)
+- [output_testmini_text_only.json](https://github.com/ZrrSkywalker/MathVerse/blob/main/output_templates/output_testmini_text_only.json): the results of the Text-only version in [testmini_text_only.json](https://github.com/ZrrSkywalker/MathVerse/blob/main/data/testmini_text_only.json)
 
 If you expect to evaluate the 'w/o' scores in the leaderboard, please adopt `query_wo` as the input for MLLMs, which prompts the model to output a direct answer. For CoT evaluation, we can utilize `query_cot` that motivates MLLMs to provide a step-by-step reasoning process. You are also encouraged to tune the optimal prompt for your own model.
 
