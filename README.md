@@ -67,7 +67,8 @@ You can download the dataset from the [🤗 Huggingface](https://huggingface.co/
 ```python
 from datasets import load_dataset
 
-dataset = load_dataset("AI4Math/MathVerse")
+dataset = load_dataset("AI4Math/MathVerse", "testmini")
+dataset_text-only = load_dataset("AI4Math/MathVerse", "testmini_text-only")
 ```
 
 Here are some examples of how to access the downloaded dataset:
@@ -80,14 +81,13 @@ print(dataset["testmini"][0]['problem_index']) # print the unique problem id
 print(dataset["testmini"][0]['problem_version']) # print the problem version
 print(dataset["testmini"][0]['question']) # print the question text
 print(dataset["testmini"][0]['query']) # print the question query
-print(dataset["testmini"][0]['image']) # print the image path
 print(dataset["testmini"][0]['answer']) # print the answer
 print(dataset["testmini"][0]['query_wo']) # the input query for w/o scores
 print(dataset["testmini"][0]['query_cot']) # the input query for CoT evaluation scores
-dataset["testmini"][0]['decoded_image'] # display the image
+dataset["testmini"][0]['image'] # display the image
 
 # print the first text-only example within the testmini set
-print(dataset["testmini_text-only"][0])
+print(dataset_text-only["testmini_text-only"][0])
 ```
 
 ### Inference
