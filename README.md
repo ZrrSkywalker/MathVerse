@@ -102,13 +102,14 @@ If you expect to evaluate the 'w/o' scores in the leaderboard, please adopt `que
 
 ### Evaluation
 
-Then, we provide the code to derive the 'w/o' scores on the leaderboard, which requires advanced LLMs (e.g., [ChatGPT/GPT-4](https://chat.openai.com/), or [Qwen-Max](https://help.aliyun.com/zh/dashscope/developer-reference/api-details)) to extract and match answers. The code 'CoT-E' scores will be released soon.
+Then, we provide the code to derive the 'w/o' scores on the leaderboard, which requires advanced LLMs (e.g., [ChatGPT/GPT-4](https://platform.openai.com/account/api-keys), or [Qwen-Max](https://help.aliyun.com/zh/dashscope/developer-reference/api-details)) to extract and match answers. The code 'CoT-E' scores will be released soon.
 
 There are two steps for the evaluation of 'w/o' scores, where we prompt the ChatGPT/GPT-4 API as an example:
 
 #### Step 1: Answer Extraction
 
 ```bash
+pip install openai
 cd evaluation
 
 python extract_answer_s1.py \
