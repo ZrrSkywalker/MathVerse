@@ -7,7 +7,6 @@ from utils import *
 
 # OpenAI
 import openai
-openai.api_key = os.getenv("OPENAI_API_KEY")
 
 from prompts import demo_prompt_extract
 
@@ -59,6 +58,9 @@ if __name__ == '__main__':
     parser.add_argument('--api_key', type=str, help='api key for openai')
     # args
     args = parser.parse_args()
+
+    # set api key
+    openai.api_key = args.api_key
 
     # read results
     result_file = args.model_output_file
