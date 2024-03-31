@@ -31,7 +31,7 @@ def match_answer(inst, api_key, quick_match=False):
         return '1' if inst['answer'] == inst['extraction'] else '0'
     # general extraction
     try:
-        full_prompt = create_test_prompt(demo_prompt, inst)
+        full_prompt = create_test_prompt(demo_prompt_score, inst)
         extraction = get_chat_response(full_prompt, api_key)
         return extraction.replace("Judgement:", "").strip()
     except Exception as e:

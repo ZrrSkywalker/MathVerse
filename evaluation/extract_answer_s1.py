@@ -28,7 +28,7 @@ def create_test_prompt(demo_prompt, response, inst):
 def extract_answer(response, inst, api_key):
     # general extraction
     try:
-        full_prompt = create_test_prompt(demo_prompt, response, inst)
+        full_prompt = create_test_prompt(demo_prompt_extract, response, inst)
         extraction = get_chat_response(full_prompt, api_key)
         return extraction
     except Exception as e:
