@@ -28,15 +28,6 @@ Extracted answer: f(x) = -x^2 - 2x + 1
 7.
 """
 
-# Model response: 'value for \\( x \\) is given, this is the expression for \\( L \\) in terms of \\( x \\):\n\n\\( L = 2 \\sqrt{(5x + 7)^2 - (2x + 3)^2} \\)'
-# Official Answer: \\frac{5\\left(5x+7\\right)}{2x+3} units
-# Extracted answer: \\( L = 2 \\sqrt{(5x + 7)^2 - (2x + 3)^2} \\)
-# Whether '\\frac{5\\left(5x+7\\right)}{2x+3} units' and '\\( L = 2 \\sqrt{(5x + 7)^2 - (2x + 3)^2} \\)' are consistent: False
-
-# Model response: 'To summarize, $\\tan (\\pi+\\theta)$ and $\\tan (2 \\pi-\\theta)$ are the expressions that are opposite to $\\tan (\\theta)$. Hence, the correct choices are:\n\nA and C'
-# Official answer: C\nD
-# Extracted answer: A and C
-# Whether 'C\nD' and 'A and C' are consistent: False
         
 
 demo_prompt_score = """
@@ -49,16 +40,20 @@ If they are consistent, Judement is 1; if they are different, Judement is 0.
 [Model_answer] : Extracted Answer: \\((-2, 1)\\)
 Judgement: 0
 
+[Question]: As shown in the figure, circle O has a radius 1.0, if angle BAC = 60.0, then the length of BC is ()\nChoices:\nA:2\nB:2\u221a{{3}}\nC:\u221a{{3}}\nD:2\u221a{{2}}
+[Standard Answer]: C
+[Model_answer] : B:2\u221a{{3}}
+Judgement: 0
+
 [Question]: Find the domain and range of the function f using interval notation.
 [Standard Answer]: domain: [-4, 0) and range: (-3, 1]
 [Model_answer] : Range: \\((-4, 1]\\)
 Judgement: 0
 
-
-[Question]: Two curves are symmetrical about the x-axis. Use the vertical line test to determine if this relation is a function.\nChoices:\nA:This is a function\nB:This is not a function
-[Standard Answer]: B
-[Model_answer] : This is not a function
-Judgement: 1
+[Question]: As shown in the figure, circle O has a radius 1.0, if angle BAC = 60.0, then the length of BC is ()\nChoices:\nA:2\nB:2\u221a{{3}}\nC:\u221a{{3}}\nD:2\u221a{{2}}
+[Standard Answer]: C
+[Model_answer] : null
+Judgement: 0
 
 [Question]: Given the graph of the ellipse that intersects with x-axis at 9 and -9 and with y-axis at 3 and -3, determine its equation.A. \\frac{{x^2}}{{81}} + \\frac{{y^2}}{{9}} = 1 B. Can not determine.\n
 [Standard Answer]: A
@@ -69,13 +64,3 @@ Judgement: 1
 [Standard Answer]: {gt}
 [Model_answer] : {extraction}
 Judgement: """
-
-# Model response: 'value for \\( x \\) is given, this is the expression for \\( L \\) in terms of \\( x \\):\n\n\\( L = 2 \\sqrt{(5x + 7)^2 - (2x + 3)^2} \\)'
-# Official Answer: \\frac{5\\left(5x+7\\right)}{2x+3} units
-# Extracted answer: \\( L = 2 \\sqrt{(5x + 7)^2 - (2x + 3)^2} \\)
-# Whether '\\frac{5\\left(5x+7\\right)}{2x+3} units' and '\\( L = 2 \\sqrt{(5x + 7)^2 - (2x + 3)^2} \\)' are consistent: False
-
-# Model response: 'To summarize, $\\tan (\\pi+\\theta)$ and $\\tan (2 \\pi-\\theta)$ are the expressions that are opposite to $\\tan (\\theta)$. Hence, the correct choices are:\n\nA and C'
-# Official answer: C\nD
-# Extracted answer: A and C
-# Whether 'C\nD' and 'A and C' are consistent: False
