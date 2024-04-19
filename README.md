@@ -137,7 +137,7 @@ Note that, step 1 is ***optional*** if your MLLM can directly output a clean ans
 
 ```bash
 python score_answer_s2.py \
---extraction_file PATH_TO_ENTRACTION_FILE \
+--answer_extraction_file PATH_TO_ENTRACTION_FILE \
 --save_file PATH_TO_SCORE_FILE \
 --cache \
 --trunk_response 30 \
