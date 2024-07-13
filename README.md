@@ -20,7 +20,7 @@ Official repository for the paper "[MathVerse: Does Your Multi-modal LLM Truly S
 ## 💥 News
 
 - **[2024.07.01]** 🎉 MathVerse is accepted by ECCV 2024 🎉
-- **[2024.03.31]** 🔥 We release the ***testmini*** set of MathVerse at [[🤗 Huggingface Dataset]](https://huggingface.co/datasets/AI4Math/MathVerse), alongside the [evaluation code](https://github.com/ZrrSkywalker/MathVerse/main/README.md#evaluation)!
+- **[2024.03.31]** 🔥 We release the ***testmini*** set of MathVerse at [[🤗 Huggingface Dataset]](https://huggingface.co/datasets/AI4Math/MathVerse), alongside the [evaluation code](https://github.com/ZrrSkywalker/MathVerse?tab=readme-ov-file#evaluation)!
 - **[2024.03.22]** 🎉 **MathVerse** has been selected as 🤗 [***Hugging Face Daily Papers***](https://huggingface.co/papers/2403.14624)!
 - **[2024.03.22]** 🚀 We release the [arXiv paper](https://arxiv.org/pdf/2403.14624) and some data samples in the [visualizer](https://mathverse-cuhk.github.io/#visualization).
 
