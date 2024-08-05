@@ -18,7 +18,7 @@ Official repository for the paper "[MathVerse: Does Your Multi-modal LLM Truly S
 
 
 ## 💥 News
-
+- **[2024.08.05]** The new official LLaVA model, [LLaVA-OneVision](https://llava-vl.github.io/blog/2024-08-05-llava-onevision/), adopt [MAVIS-Insruct](https://github.com/ZrrSkywalker/MAVIS) as training data 🔥, achieving new SoTA on MathVerse.
 - **[2024.07.31]** 🎉 MathVerse is officially supported by [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval) for very fast evalution 🚀
 - **[2024.07.11]** 🔥 We release [MAVIS](https://github.com/ZrrSkywalker/MAVIS) to boost mathematical MLLMs, including two large-scale datasets, **MAVIS-Caption & Instruct** 📊, a vision encoder **Math-CLIP** 📐, and a math-specific MLLM, **MAVIS-7B** 🎓
 - **[2024.07.01]** 🎉 MathVerse is accepted by ECCV 2024 🎉
