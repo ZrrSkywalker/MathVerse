@@ -25,31 +25,107 @@ Official repository for the paper "[MathVerse: Does Your Multi-modal LLM Truly S
 - **[2024.03.31]** 🔥 We release the ***testmini*** set of MathVerse at [[🤗 Huggingface Dataset]](https://huggingface.co/datasets/AI4Math/MathVerse), alongside the [evaluation code](https://github.com/ZrrSkywalker/MathVerse?tab=readme-ov-file#evaluation)!
 - **[2024.03.22]** 🚀 We release the [arXiv paper](https://arxiv.org/pdf/2403.14624) and some data samples in the [visualizer](https://mathverse-cuhk.github.io/#visualization).
 
-## 📌 ToDo
-
-- Coming soon: *CoT Evaluation results & tools*, and the full MathVerse dataset
 
 ## 👀 About MathVerse
 
 The capabilities of **Multi-modal Large Language Models (MLLMs)** in **visual math problem-solving** remain insufficiently evaluated and understood. We investigate current benchmarks to incorporate excessive visual content within textual questions, which potentially assist MLLMs in deducing answers without truly interpreting the input diagrams.
 
 <p align="center">
-    <img src="figs/fig1.png" width="90%"> <br>
+    <img src="figs/fig1.png" width="80%"> <br>
 </p>
 
 To this end, we introduce **MathVerse**, an all-around visual math benchmark designed for an equitable and in-depth evaluation of MLLMs. We meticulously collect 2,612 high-quality, multi-subject math problems with diagrams from publicly available sources. Each problem is then transformed by human annotators into **six distinct versions**, each offering varying degrees of information content in multi-modality, contributing to **15K** test samples in total. This approach allows MathVerse to comprehensively assess ***whether and how much MLLMs can truly understand the visual diagrams for mathematical reasoning.*** 
 
 <p align="center">
-    <img src="figs/fig2.png" width="90%"> <br>
+    <img src="figs/fig2.png" width="85%"> <br>
     Six different versions of each problem in <b>MathVerse</b> transformed by expert annotators.
 </p>
 
 In addition, we propose a **Chain-of-Thought (CoT) Evaluation strategy** for a fine-grained assessment of the output answers. Rather than naively judging True or False, we employ GPT-4(V) to adaptively extract crucial reasoning steps, and then score each step with detailed error analysis, which can reveal the intermediate CoT reasoning quality by MLLMs.
 
-<p align="center">
-    <img src="figs/fig3.png" width="90%"> <br>
-    The two phases of the CoT evaluation strategy.
-</p>
+
+
+## 🚀 Evaluation with lmms-eval
+
+We strongly recommand to use [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval) for evaluating MathVerse, which is very efficient and convenient.
+
+First install the package:
+```bash
+pip install lmms-eval
+```
+Then run by specifying $GPTAPI, $ModelType, $ModelPath, $Template, and $OutputPath:
+```bash
+export API_TYPE="openai"
+export OPENAI_API_KEY="$GPTAPI"
+
+python3 -m accelerate.commands.launch \
+    --main_process_port=12347 \
+    --num_processes=8 \
+    -m lmms_eval \
+    --model $ModelType \
+    --model_args pretrained="$ModelPath,$Template" \
+    --tasks mathverse_testmini \
+    --batch_size 1 \
+    --log_samples \
+    --output_path $OutputPath/
+```
+Please refer to the guideline of [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval) for setting your $ModelType, $ModelPath, and $Template.
+
+You can also choose one problem version for evaluation by specifying `--tasks`, e.g., `--tasks mathverse_testmini_text_lite` or `--tasks mathverse_testmini_text_lite,mathverse_testmini_text_only`
+
+We provide an example for evaluating LLaVA-OneVision:
+```bash
+export API_TYPE="openai"
+export OPENAI_API_KEY="$GPTAPI"
+
+python3 -m accelerate.commands.launch \
+    --main_process_port=12347 \
+    --num_processes=8 \
+    -m lmms_eval \
+    --model llava_onevision \
+    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov,conv_template=qwen_1_5,model_name=llava_qwen" \
+    --tasks mathverse_testmini \
+    --batch_size 1 \
+    --log_samples \
+    --output_path ./test/
+```
+
+## 💪 Evaluation by yourself
+
+If your model type has not yet supported by lmms-eval, we also provide the code to derive the 'w/o' scores by yourself, which requires advanced LLMs (e.g., [ChatGPT/GPT-4](https://platform.openai.com/account/api-keys), or [Qwen-Max](https://help.aliyun.com/zh/dashscope/developer-reference/api-details)) to extract and match answers. The code 'CoT-E' scores will be released soon.
+
+There are two steps for the evaluation of 'w/o' scores, where we prompt the ChatGPT/GPT-4 API as an example:
+
+#### Step 1: Answer Extraction
+
+```bash
+pip install openai
+cd evaluation
+
+python extract_answer_s1.py \
+--model_output_file PATH_TO_OUTPUT_FILE \
+--save_file PATH_TO_ENTRACTION_FILE \
+--cache \
+--trunk_response 30 \
+--save_every 10 \
+--api_key GPT_API
+```
+
+Note that, step 1 is ***optional*** if your MLLM can directly output a clean answer for scoring.
+
+#### Step2: Answer Scoring
+
+```bash
+python score_answer_s2.py \
+--answer_extraction_file PATH_TO_ENTRACTION_FILE \
+--save_file PATH_TO_SCORE_FILE \
+--cache \
+--trunk_response 30 \
+--save_every 10 \
+--api_key GPT_API
+```
+
+Note that, we recommend using ChatGPT/GPT-4 API for step 2 by default. By adding `--quick_match` in the command above, we also support a direct string matching between extracted answers and ground truths, which is faster but not accurate enough.
 
 ## 🏆 Leaderboard
 
@@ -111,43 +187,6 @@ First, please refer to the following two templates to prepare your result json f
 
 If you expect to evaluate the 'w/o' scores in the leaderboard, please adopt `query_wo` as the input for MLLMs, which prompts the model to output a direct answer. For CoT evaluation, we can utilize `query_cot` that motivates MLLMs to provide a step-by-step reasoning process. You are also encouraged to tune the optimal prompt for your own model.
 
-
-### Evaluation
-
-Then, we provide the code to derive the 'w/o' scores on the leaderboard, which requires advanced LLMs (e.g., [ChatGPT/GPT-4](https://platform.openai.com/account/api-keys), or [Qwen-Max](https://help.aliyun.com/zh/dashscope/developer-reference/api-details)) to extract and match answers. The code 'CoT-E' scores will be released soon.
-
-There are two steps for the evaluation of 'w/o' scores, where we prompt the ChatGPT/GPT-4 API as an example:
-
-#### Step 1: Answer Extraction
-
-```bash
-pip install openai
-cd evaluation
-
-python extract_answer_s1.py \
---model_output_file PATH_TO_OUTPUT_FILE \
---save_file PATH_TO_ENTRACTION_FILE \
---cache \
---trunk_response 30 \
---save_every 10 \
---api_key GPT_API
-```
-
-Note that, step 1 is ***optional*** if your MLLM can directly output a clean answer for scoring.
-
-#### Step2: Answer Scoring
-
-```bash
-python score_answer_s2.py \
---answer_extraction_file PATH_TO_ENTRACTION_FILE \
---save_file PATH_TO_SCORE_FILE \
---cache \
---trunk_response 30 \
---save_every 10 \
---api_key GPT_API
-```
-
-Note that, we recommend using ChatGPT/GPT-4 API for step 2 by default. By adding `--quick_match` in the command above, we also support a direct string matching between extracted answers and ground truths, which is faster but not accurate enough.
 
 ## 📐 Dataset Examples
 
