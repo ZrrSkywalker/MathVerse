@@ -18,6 +18,7 @@ Official repository for the paper "[MathVerse: Does Your Multi-modal LLM Truly S
 
 
 ## 💥 News
+- **[2025.04.28]** 🔥 [VL-Rethinker](https://arxiv.org/pdf/2504.08837) achieves SOTA performance of 61.7! The latest result has been updated on the leaderboard. If you want your model shown on the leaderboard, please contact `jdzcarr7@gmail.com` for leaderboard contribution.
 - **[2024.09.23]** 🎉 MathVerse is officially supported by [VLMEvalKit](https://github.com/open-compass/VLMEvalKit) for very fast evalution 🚀
 - **[2024.08.05]** The new official LLaVA model, [LLaVA-OneVision](https://llava-vl.github.io/blog/2024-08-05-llava-onevision/), adopt [MAVIS-Insruct](https://github.com/ZrrSkywalker/MAVIS) as training data 🔥, achieving new SoTA on MathVerse.
 - **[2024.07.31]** 🎉 MathVerse is officially supported by [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval) for very fast evalution 🚀
@@ -132,6 +133,7 @@ Note that, we recommend using ChatGPT/GPT-4 API for step 2 by default. By adding
 ### Contributing to the *testmini* Leaderboard
 
 🚨 The [Leaderboard](https://mathverse-cuhk.github.io/#leaderboard) for the *testmini* set is continuously being updated, welcoming the contribution of your excellent MLLMs! ***Currently, we regard the 'w/o' scores without the CoT evaluation as the primary metric in MathVerse***, which is more cost-effective and saves time.
+🔥 Please contact `jdzcarr7@gmail.com` for leaderboard contribution.
 
 ### Data Usage
 
@@ -238,6 +240,7 @@ If you find **MathVerse** useful for your research and applications, please kind
 
 Explore our additional research on **Vision-Language Large Models**, focusing on multi-modal LLMs and mathematical reasoning:
 
+- **[MME-CoT]** [MME-CoT: Benchmarking Chain-of-Thought in Large Multimodal Models for Reasoning Quality, Robustness, and Efficiency](https://mmecot.github.io/)
 - **[MathVista]** [MathVista: Evaluating Mathematical Reasoning of Foundation Models in Visual Contexts](https://github.com/lupantech/MathVista)
 - **[LLaMA-Adapter]** [LLaMA-Adapter: Efficient Fine-tuning of Language Models with Zero-init Attention](https://github.com/OpenGVLab/LLaMA-Adapter)
 - **[LLaMA-Adapter V2]** [LLaMA-Adapter V2: Parameter-Efficient Visual Instruction Model](https://github.com/OpenGVLab/LLaMA-Adapter)
