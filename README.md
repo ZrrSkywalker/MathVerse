@@ -133,6 +133,7 @@ Note that, we recommend using ChatGPT/GPT-4 API for step 2 by default. By adding
 ### Contributing to the *testmini* Leaderboard
 
 🚨 The [Leaderboard](https://mathverse-cuhk.github.io/#leaderboard) for the *testmini* set is continuously being updated, welcoming the contribution of your excellent MLLMs! ***Currently, we regard the 'w/o' scores without the CoT evaluation as the primary metric in MathVerse***, which is more cost-effective and saves time.
+
 🔥 Please contact `jdzcarr7@gmail.com` for leaderboard contribution.
 
 ### Data Usage
